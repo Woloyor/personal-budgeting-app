@@ -12,18 +12,22 @@ public class MainActivity extends AppCompatActivity {
 
    // private CardView budgetCardView, todayCardView;
 
-    private ImageView weekBtnImageView, todayBtnImageView, monthBtnImageView, analyticsImageView; /*budgetBtnImageView ;*/
+   // private ImageView weekBtnImageView, todayBtnImageView, monthBtnImageView, analyticsImageView; /*budgetBtnImageView ;*/
+
+    private CardView analyticsCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        weekBtnImageView = findViewById(R.id.weekBtnImageView);
+       /* weekBtnImageView = findViewById(R.id.weekBtnImageView);
         todayBtnImageView = findViewById(R.id.todayBtnImageView);
         monthBtnImageView = findViewById(R.id.monthBtnImageView);
         analyticsImageView = findViewById(R.id.analyticsImageView);
-       // budgetBtnImageView = findViewById(R.id.budgetBtnImageView);
+       // budgetBtnImageView = findViewById(R.id.budgetBtnImageView);*/
+
+        analyticsCardView = findViewById(R.id.analyticsCardView);
 
 
 
@@ -35,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        todayBtnImageView.setOnClickListener(new View.OnClickListener() {
+       /* todayBtnImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, TodaySpendingActivity.class);
@@ -62,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         analyticsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ChooseAnalyticActivity.class);
+                startActivity(intent);
+            }
+        });*/
+
+        analyticsCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChooseAnalyticActivity.class);
